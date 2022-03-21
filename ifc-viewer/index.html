@@ -14,9 +14,7 @@
                     <label for="properties">Choose property information you are interested in:</label>
                     <select name="properties" id="properties">
                         <option value="native">Native Properties</option>
-                        <option value="type">IFC Type</option>
-                        <option value="material">Material Information</option>
-                        <option value="sets">Property Sets</option>
+                        <option value="other">Other Properties</option>
                         <option value="spatial">Spatial Structure</option>
                     </select>
                     <pre class="properties-section" id="properties-section"></pre>
@@ -24,11 +22,16 @@
 
                 <div class="buttons-section">
                     <input type="file" name="load" id="file-input" class="file-input" />
-                </div>           
+                    <button id="clipper-toggle">Toggle clipper</button>
+                    <button id="dimension-toggle">Toggle dimensions</button>
+                </div>  
+                
+                <div>
+                    <p>Clipper Togggle: <span id="clipper-toggle-text"></span></p>
+                    <p>Dimensions Toggle: <span id="dimension-toggle-text"></span></p>
+                </div>   
             </div>
-            <div>
-                <canvas id="three-canvas"></canvas>
-            </div>
+            <div id="three-canvas"></div>
         </main>
 
         <script src="bundle.js"></script>
